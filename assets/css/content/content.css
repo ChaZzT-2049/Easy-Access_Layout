@@ -22,25 +22,24 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-
-    .welcome__img{
-        width: 70px;
-    }
-    .welcome__gretting{
-        font-weight: 300;
-        & b{
-            font-weight: 700;
-        }
-    }
+}
+.welcome__img{
+    width: 70px;
+}
+.welcome__gretting{
+    font-weight: 300;
+}
+.welcome__gretting b{
+    font-weight: 700;
 }
 .resume{
     margin-top: .5rem;
-    .resume__title{
-        color: var(--primary);
-        border-bottom: 2px solid var(--primary);
-        font-weight: 400;
-        margin-bottom: 1rem;
-    }
+}
+.resume__title{
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 .inscripciones{
     display: flex;
@@ -50,38 +49,35 @@
     flex-direction: row-reverse;
     justify-content: center;
     transition: all 300ms ease-in-out;
-    .inscripcion{
-        display: flex;
-        width: 25%;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--secondary-cont);
-        color: var(--on-secondary-cont);
-        border-radius: .5rem;
-        padding: 1rem;
-        height: 90px;
-
-        .inscripcion__info{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .inscripcion__nombre{
-                font-weight: 700;
-            }
-        }
-
-        .inscripcion__icon{
-            font-size: 3.5rem;
-            cursor: default;
-        }
-    }
-    & .btn--round{
-        padding: 1rem;
-        width: 25%;
-        order: -1;
-    }
+}
+.inscripciones .btn--round{
+    padding: 1rem;
+    width: 25%;
+    order: -1;
+}
+.inscripcion{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-cont);
+    color: var(--on-secondary-cont);
+    border-radius: .5rem;
+    padding: 1rem;
+    height: 90px;
+}
+.inscripcion__info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inscripcion__nombre{
+    font-weight: 700;
+}
+.inscripcion__icon{
+    font-size: 3.5rem;
+    cursor: default;
 }
 .accesos{
     display: flex;
@@ -89,44 +85,44 @@
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    .acceso{
-        background: var(--surface-v);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 15%;
-        height: 150px;
-        padding: 1rem;
-        border-radius: .5rem;
-        transition: all 300ms ease-in-out;
-        .hora{
-            font-weight: 300;
-        }
-        .lugar{
-            text-decoration: underline;
-            text-align: center;
-        }
-        .estado{
-            font-size: 1.125rem;
-            font-weight: 700;
-        }
-        .estado--falta{
-            color: var(--error);
-        }
-        .estado--retardo{
-            color: var(--alert);
-        }
-        .estado--ok{
-            color: var(--ok);
-        }
-    }
-    .acceso:hover{
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    }
-    .proximo {
-        outline: 4px solid var(--primary-cont);
-    }
+}
+.acceso{
+    background: var(--surface-v);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    height: 150px;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: all 300ms ease-in-out;
+}
+.hora{
+    font-weight: 300;
+}
+.lugar{
+    text-decoration: underline;
+    text-align: center;
+}
+.estado{
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.estado--falta{
+    color: var(--error);
+}
+.estado--retardo{
+    color: var(--alert);
+}
+.estado--ok{
+    color: var(--ok);
+}
+.acceso:hover{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.proximo {
+    outline: 4px solid var(--primary-cont);
 }
 
 .asignados{
@@ -190,11 +186,11 @@
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         gap: .5rem;
-        .inscripcion{
-            scroll-snap-align: center;
-            width: 75%;
-            gap: .5rem;
-        }
+    }
+    .inscripcion{
+        scroll-snap-align: center;
+        width: 75%;
+        gap: .5rem;
     }
     .inscripcion__info{
         width: max-content;
@@ -203,10 +199,8 @@
         order: 1;
         scroll-snap-align: center;
     }
-    .accesos{
-        .acceso{
-            width: 35%;
-        }
+    .acceso{
+        width: 35%;
     }
     .asignados{
         justify-content: flex-start;

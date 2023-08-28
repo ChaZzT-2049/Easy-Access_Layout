@@ -42,14 +42,14 @@ a.btn--icon{
     color: var(--on-bg);
     text-align: center;
     transition: outline 300ms ease-in;
-    & i{
-        background: var(--secondary);
-        border-radius: 100%;
-        font-size: 1.75rem;
-        padding: .75rem;
-        color: var(--secondary-cont);
-        cursor: pointer;
-    }
+}
+.btn--round i{
+    background: var(--secondary);
+    border-radius: 100%;
+    font-size: 1.75rem;
+    padding: .75rem;
+    color: var(--secondary-cont);
+    cursor: pointer;
 }
 .btn--round i:hover{
     outline: .25rem solid var(--secondary-cont);
