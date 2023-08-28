@@ -6,6 +6,7 @@
 }
 ::selection{
     background: var(--tertiary-cont);
+    color: var(--tertiary)
 }
 
 i{
@@ -19,9 +20,13 @@ h2 { font-size: 1.5rem; }
 h3 { font-size: 1.17rem; } 
 h5 { font-size: .83rem; } 
 h6 { font-size: .75rem; }
+html{
+    height: 100%;
+}
 .container{
     display: flex;
     box-sizing: border-box;
+    height: 100%;
 }
 body{
     color: var(--on-bg);
@@ -106,7 +111,7 @@ body:has(.sidebar--shown) #openside{
 .app{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .container{
