@@ -1,0 +1,226 @@
+.main__container{
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    color: var(--on-bg);
+    box-sizing: border-box;
+}
+.main__container::-webkit-scrollbar{
+    width: .5rem;
+}
+.main__container::-webkit-scrollbar-track{
+    background: var(--surface-v);
+    border-radius: .5rem;
+}
+.main__container::-webkit-scrollbar-thumb{
+    background: var(--primary-cont);
+    border-radius: .25rem;
+    box-shadow: inset 0 0 2px var(--on-surf-v);
+}
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .welcome__img{
+        width: 70px;
+    }
+    .welcome__gretting{
+        font-weight: 300;
+        & b{
+            font-weight: 700;
+        }
+    }
+}
+.resume{
+    margin-top: .5rem;
+    .resume__title{
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+}
+.inscripciones{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    transition: all 300ms ease-in-out;
+    .inscripcion{
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--secondary-cont);
+        color: var(--on-secondary-cont);
+        border-radius: .5rem;
+        padding: 1rem;
+        height: 90px;
+
+        .inscripcion__info{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .inscripcion__nombre{
+                font-weight: 700;
+            }
+        }
+
+        .inscripcion__icon{
+            font-size: 3.5rem;
+            cursor: default;
+        }
+    }
+    & .btn--round{
+        padding: 1rem;
+        width: 25%;
+        order: -1;
+    }
+}
+.accesos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    .acceso{
+        background: var(--surface-v);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 15%;
+        height: 150px;
+        padding: 1rem;
+        border-radius: .5rem;
+        transition: all 300ms ease-in-out;
+        .hora{
+            font-weight: 300;
+        }
+        .lugar{
+            text-decoration: underline;
+            text-align: center;
+        }
+        .estado{
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+        .estado--falta{
+            color: var(--error);
+        }
+        .estado--retardo{
+            color: var(--alert);
+        }
+        .estado--ok{
+            color: var(--ok);
+        }
+    }
+    .acceso:hover{
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .proximo {
+        outline: 4px solid var(--primary-cont);
+    }
+}
+
+.asignados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.asignado{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--outline);
+    border-radius: 1rem;
+    width: 20%;
+}
+.asignado__perfil{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-weight: 700;
+}
+.asignado__perfil img{
+    width: 4rem;
+    border-radius: 100%;
+    border: 4px solid var(--primary-cont);
+}
+.asignado__acceso{
+    padding: 0 1rem;
+}
+.asig__estado{
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 0 .825rem .825rem;
+    margin-top: 1rem;
+}
+.asig--ok{
+    background: var(--ok-cont);
+    color: var(--on-ok-cont);
+}
+.asig--retardo{
+    background: var(--alert-cont);
+    color: var(--on-alert-cont);
+}
+.asig--falta{
+    background: var(--error-cont);
+    color: var(--on-error-cont);
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .main__container{
+        padding: .5rem;
+    }
+    .main__container::-webkit-scrollbar{
+        width: .125rem;
+    }
+    .inscripciones{
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        gap: .5rem;
+        .inscripcion{
+            scroll-snap-align: center;
+            width: 75%;
+            gap: .5rem;
+        }
+    }
+    .inscripcion__info{
+        width: max-content;
+    }
+    .inscripciones .btn--round{
+        order: 1;
+        scroll-snap-align: center;
+    }
+    .accesos{
+        .acceso{
+            width: 35%;
+        }
+    }
+    .asignados{
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: .5rem;
+    }
+    .asignado{
+        width: 50%;
+    }
+    .asignado__perfil{
+        width: fit-content;
+        max-width: max-content;
+    }
+    .asignado__perfil img{
+        width: 2.5rem;
+    }
+}

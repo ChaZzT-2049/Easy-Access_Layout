@@ -1,0 +1,61 @@
+.btn--primary{
+    background: var(--primary);
+    color: var(--on-primary);
+    transition: all 300ms linear;
+    font-weight: 700;
+}
+.btn--primary:hover{
+    outline: 1px solid var(--primary);
+    color: var(--primary);
+    background: inherit;
+}
+.btn--secondary{
+    background: var(--secondary);
+    color: var(--on-secondary);
+    transition: all 300ms linear;
+    font-weight: 700;
+}
+.btn--secondary:hover{
+    outline: 1px solid var(--secondary);
+    color: var(--secondary);
+    background: inherit;
+}
+
+.btn--icon{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 0 .5rem;
+    border-radius: .25rem;
+    width: max-content;
+}
+
+a.btn--icon{
+    text-decoration: none;
+}
+
+.btn--round{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    color: var(--on-bg);
+    text-align: center;
+    transition: outline 300ms ease-in;
+    & i{
+        background: var(--secondary);
+        border-radius: 100%;
+        font-size: 1.75rem;
+        padding: .75rem;
+        color: var(--secondary-cont);
+        cursor: pointer;
+    }
+}
+.btn--round i:hover{
+    outline: .25rem solid var(--secondary-cont);
+}
+
+a.btn--round{
+    text-decoration: none;
+    cursor: default;
+}
