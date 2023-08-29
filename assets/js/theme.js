@@ -1,5 +1,11 @@
 const themeBtn = document.querySelector("#theme")
 
+if(localStorage.getItem("mode") != ""){
+    document.body.classList.add(localStorage.getItem("mode"))
+    themeBtn.previousElementSibling.textContent = "Dark"
+    themeBtn.textContent = "dark_mode"
+}
+
 themeBtn.addEventListener("click", () =>{
     document.body.classList.toggle("dark");
     if(document.body.classList.contains("dark")){
@@ -12,9 +18,3 @@ themeBtn.addEventListener("click", () =>{
         localStorage.setItem("mode", "");
     }
 })
-
-if(localStorage.getItem("mode") != ""){
-    document.body.classList.add(localStorage.getItem("mode"))
-    themeBtn.previousElementSibling.textContent = "Dark"
-    themeBtn.textContent = "dark_mode"
-}

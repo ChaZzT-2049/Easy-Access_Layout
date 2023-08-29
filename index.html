@@ -23,6 +23,33 @@
             <i class="material-icons" id="closeside">close</i>
             <h2>Menú</h2>
         </div>
+        <div class="sidebar__content">
+            <div class="sidebar__section">
+                <img class="profile__img" src="assets/img/user.png" alt="">
+                <h3 class="profile__name">Nombre de Usuario</h3>
+                <small class="profile__email">correo.electronico@gmail.com</small>
+            </div>
+            <div class="sidebar__section">
+                <a href="#" class="nav__option nav--active">Home<i class="material-icons">home</i></a>
+                <a href="#" class="nav__option">Panel Administrador<i class="material-icons">dashboard</i></a>
+                <a href="#" class="nav__option">Mis Vehiculos<i class="material-icons">directions_car</i></a>
+                <a href="#" class="nav__option">Usuarios Asignados<i class="material-icons">supervisor_account</i></a>
+                <a href="#" class="nav__option">Notificaciones<i class="material-icons">notifications</i></a>
+            </div>
+            <div class="sidebar__section">
+                <a href="#" class="nav__option">Perfil de Usuario<i class="material-icons">account_circle</i></a>
+                <a href="#" class="nav__option">Suscripcíon<i class="material-icons">credit_card</i></a>
+                <a href="#" class="nav__option">Cerrar Sesión<i class="material-icons">logout</i></a>
+            </div>
+            <div class="sidebar__section">
+                <a href="#" class="nav__option">Ayuda<i class="material-icons">help</i></a>
+                <a href="#" class="nav__option">Accesibilidad<i class="material-icons">accessibility</i></a>
+                <a href="#" class="nav__option">Soporte<i class="material-icons">question_answer</i></a>
+            </div>
+        </div>
+        <div class="logo__container">
+            <img class="sidebar__logo" src="assets/img/logo_horizontal.png" alt="">
+        </div>
     </div>
     <div class="app">
         <header class="topbar">
@@ -91,20 +118,8 @@
                 </div>
             </section>
             <section class="resume">
-                <h3 class="resume__title">Registros Pendientes y Accesos Proximos</h3>
+                <h3 class="resume__title">Accesos Proximos</h3>
                 <div class="accesos">
-                    <div class="acceso pasado">
-                        <h2 class="hora">7:00 AM</h2>
-                        <p class="lugar">UT Riviera Maya</p>
-                        <span class="estado estado--retardo">Retardo</span>
-                        <a class="btn--secondary btn--icon" href="#">Justificar <i class="material-icons">assignment_late</i></a>
-                    </div>
-                    <div class="acceso pasado">
-                        <h2 class="hora">6:00 PM</h2>
-                        <p class="lugar">Smart Fit PA</p>
-                        <span class="estado estado--falta">Falta</span>
-                        <a class="btn--secondary btn--icon" href="#">Justificar <i class="material-icons">assignment_late</i></a>
-                    </div>
                     <div class="acceso proximo">
                         <h2 class="hora">7:00 AM</h2>
                         <p class="lugar">UT Riviera Maya</p>
@@ -122,6 +137,23 @@
                         <p class="lugar">Smart Fit PA</p>
                         <span class="estado estado--ok">A Tiempo</span>
                         <a class="btn--secondary btn--icon" href="#">Mostrar <i class="material-icons">qr_code</i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="resume">
+                <h3 class="resume__title">Registros Pendientes</h3>
+                <div class="accesos">
+                    <div class="acceso pasado">
+                        <h2 class="hora">7:00 AM</h2>
+                        <p class="lugar">UT Riviera Maya</p>
+                        <span class="estado estado--retardo">Retardo</span>
+                        <a class="btn--secondary btn--icon" href="#">Justificar <i class="material-icons">assignment_late</i></a>
+                    </div>
+                    <div class="acceso pasado">
+                        <h2 class="hora">6:00 PM</h2>
+                        <p class="lugar">Smart Fit PA</p>
+                        <span class="estado estado--falta">Falta</span>
+                        <a class="btn--disabled btn--icon" href="#">Justificar <i class="material-icons">assignment_late</i></a>
                     </div>
                 </div>
             </section>
@@ -145,7 +177,7 @@
                             <h3>Juan Perez</h3>
                         </div>
                         <div class="asignado__acceso">
-                            <p>UT Riviera Maya</p>
+                            <p>Ocean Riviera Paradise</p>
                             <span>7:00 AM</span>
                         </div>
                         <small class="asig__estado asig--retardo">Retardo</small>

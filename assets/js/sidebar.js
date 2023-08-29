@@ -14,3 +14,18 @@ openSidebar.addEventListener("click", () =>{
 closeSidebar.addEventListener("click", () =>{
     sidebar.classList.toggle("sidebar--shown")
 })
+
+const navOptions = document.querySelectorAll(".nav__option");
+
+navOptions.forEach((option) =>{
+    option.addEventListener("click", (event) =>{ changeOption(event.target) })
+})
+
+const changeOption = (item) => {
+    navOptions.forEach((option) =>{
+        option.classList.remove("nav--active")
+        if(option.contains(item)){
+            option.classList.add("nav--active")
+        }
+    })
+}

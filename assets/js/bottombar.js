@@ -1,10 +1,10 @@
 const navItems = document.querySelectorAll(".nav__item")
 
 navItems.forEach((navItem) =>{
-    navItem.addEventListener("click", (event) =>{ changeTab(event.target) })
+    navItem.addEventListener("click", (event) =>{ changeItem(event.target) })
 })
 
-const changeTab = (item) => {
+const changeItem = (item) => {
     navItems.forEach((navItem) =>{
         navItem.classList.remove("item--active")
         if(navItem.contains(item)){

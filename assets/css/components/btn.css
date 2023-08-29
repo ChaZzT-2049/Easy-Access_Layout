@@ -2,7 +2,6 @@
     background: var(--primary);
     color: var(--on-primary);
     transition: all 300ms linear;
-    font-weight: 700;
 }
 .btn--primary:hover{
     outline: 1px solid var(--primary);
@@ -13,12 +12,16 @@
     background: var(--secondary);
     color: var(--on-secondary);
     transition: all 300ms linear;
-    font-weight: 700;
 }
 .btn--secondary:hover{
     outline: 1px solid var(--secondary);
     color: var(--secondary);
     background: inherit;
+}
+.btn--disabled{
+    background: var(--outline);
+    color: var(--surface-v);
+    cursor: not-allowed;
 }
 
 .btn--icon{
@@ -28,6 +31,7 @@
     padding: 0 .5rem;
     border-radius: .25rem;
     width: max-content;
+    font-weight: 700;
 }
 
 a.btn--icon{

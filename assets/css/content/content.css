@@ -3,7 +3,9 @@
     padding: 2rem;
     overflow-y: auto;
     color: var(--on-bg);
+    background: var(--bg);
     box-sizing: border-box;
+    transition: all 200ms ease-in;
 }
 .main__container::-webkit-scrollbar{
     width: .5rem;
@@ -87,16 +89,16 @@
     flex-wrap: wrap;
 }
 .acceso{
-    background: var(--surface-v);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    min-width: fit-content;
     width: 15%;
     height: 150px;
     padding: 1rem;
     border-radius: .5rem;
-    transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in;
 }
 .hora{
     font-weight: 300;
@@ -119,7 +121,8 @@
     color: var(--ok);
 }
 .acceso:hover{
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    background: var(--surface-v);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
 }
 .proximo {
     outline: 4px solid var(--primary-cont);
@@ -129,36 +132,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
 }
 .asignado{
     display: flex;
     flex-direction: column;
     border: 4px solid var(--outline);
     border-radius: 1rem;
-    width: 20%;
+    width: fit-content;
 }
 .asignado__perfil{
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    gap: .5rem;
+    padding: .5rem;
     font-weight: 700;
+    border-bottom: 4px solid var(--outline);
 }
 .asignado__perfil img{
-    width: 4rem;
+    width: 3rem;
     border-radius: 100%;
     border: 4px solid var(--primary-cont);
 }
 .asignado__acceso{
-    padding: 0 1rem;
+    padding: .5rem;
 }
 .asig__estado{
-    padding: 1rem;
+    padding: .5rem;
     text-align: center;
     border-radius: 0 0 .825rem .825rem;
-    margin-top: 1rem;
 }
 .asig--ok{
     background: var(--ok-cont);
@@ -204,11 +208,9 @@
     }
     .asignados{
         justify-content: flex-start;
+        flex-wrap: nowrap;
         overflow-x: auto;
         gap: .5rem;
-    }
-    .asignado{
-        width: 50%;
     }
     .asignado__perfil{
         width: fit-content;
