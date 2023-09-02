@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+    <title>Easy-Access - Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/topbar/topbar.css">
+    <link rel="stylesheet" href="assets/css/content/content.css">
+    <link rel="stylesheet" href="assets/css/sign-in-up/sign-in-up.css">
+</head>
+<body class="container">
+    <div class="app">
+        <header class="topbar">
+            <div class="topbar__info">
+                <div class="logo">
+                    <img class="logo__icon" src="assets/img/logo.png" alt="Logo">
+                    <h2 class="logo__title"><a href="index.html">Easy-<b>Access</b></a></h2>
+                </div>
+            </div>
+            <ul class="topbar__nav">
+                <li><a class="btn btn--primary" href="login.html">Login</a></li>
+            </ul>
+        </header>
+        <main class="main__container">
+
+            <div class="sign--in-up__card">
+                <div class="logo--vertical">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+                    <h2>Easy-<b>Access</b></h2>
+                    <small>Acceso seguro, Acceso fácil.</small>
+                </div>
+                <h1 class="sign--in-up__title">Registro</h1>
+                <form class="sign--in-up__form" action="home.html">
+                    <fieldset class="sign--in-up__form__field">
+                        <label for="nombre">Nombre</label>
+                        <input type="email" name="nombre" id="nombre" placeholder="Escribe tu nombre completo">
+                    </fieldset>
+                    <fieldset class="sign--in-up__form__field">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" placeholder="Escribe tu correo electronico">
+                    </fieldset>
+                    <fieldset class="sign--in-up__form__field">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Escribe una contraseña">
+                    </fieldset>
+                    <fieldset class="sign--in-up__form__field">
+                        <label for="passwordc">Confirmar Contraseña</label>
+                        <input type="passwordc" name="passwordc" id="passwordc" placeholder="Escribe de nuevo la contraseña">
+                    </fieldset>
+                    <fieldset class="sign--in-up__form__field--row">
+                        <label for="terms"><small>He leído y acepto los terminos y condiciones.</small></label>
+                        <input type="checkbox" name="terms" id="terms">
+                    </fieldset>
+                    <button class="btn btn--primary">Crear Cuenta</button>
+                    <legend class="register__enlace">¿Ya tienes cuenta? <a href="register.html">Inicia Sesión aquí</a>.</legend>
+                </form>
+            </div>
+        </main>
+        <footer class="sign--in-up__footer"><h4>Easy-Access. © Derechos Reservados 2023</h4></footer>
+    </div>
+</body>
+</html>
+<script src="assets/js/theme.js"></script>

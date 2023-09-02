@@ -1,0 +1,40 @@
+.slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--outline);
+    height: 90%;
+}
+.slogan img{
+    width: 30%;
+}
+.slogan h1{
+    color: var(--primary);
+    line-height: normal;
+    transition: all 400ms ease-in;
+}
+.slogan h1 b{
+    font-weight: 700;
+}
+.slogan img:hover ~ h1{
+    transform: scale(2);
+    margin-bottom: 1rem;
+}
+.slogan h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--outline);
+    text-align: center;
+    
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .slogan{
+        height: 35%;
+    }
+    .slogan img:hover ~ h1{
+        transform: scale(1.5);
+        margin-bottom: 1rem;
+    }
+}

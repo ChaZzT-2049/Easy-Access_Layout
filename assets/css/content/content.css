@@ -6,6 +6,12 @@
     background: var(--bg);
     box-sizing: border-box;
     transition: all 200ms ease-in;
+
+}
+.main__container:has(.login__card){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .main__container::-webkit-scrollbar{
     width: .5rem;

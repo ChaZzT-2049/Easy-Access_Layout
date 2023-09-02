@@ -30,8 +30,18 @@
 .logo__title{
     line-height: normal;
 }
+.logo__title a{
+    text-decoration: none;
+    color: inherit;
+}
 .logo__title b{
     font-weight: 700;
+}
+
+.topbar__nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .options{
@@ -80,12 +90,18 @@
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .topbar{
-        padding: 1rem;
+        padding: 1rem .5rem;
+    }
+    .logo__title{
+        font-size: 1.17rem;
     }
     .options{
         margin: .5rem;
     }
     .conf__item{
         padding: .5rem;
+    }
+    .topbar__nav{
+        gap: .5rem;
     }
 }

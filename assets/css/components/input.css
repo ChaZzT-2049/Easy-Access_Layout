@@ -1,0 +1,21 @@
+label{
+    font-weight: 700;
+}
+input{
+    padding: .5rem 1rem;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 2px solid var(--outline);
+    border-radius: .25rem;
+    background: inherit;
+    color: inherit;
+    caret-color: var(--secondary);
+}
+input:hover{
+    background: var(--surface-v);
+}
+input:focus{
+    border-color: var(--secondary);
+    outline: 2px solid var(--secondary-cont);
+}

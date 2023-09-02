@@ -1,4 +1,5 @@
 @import url(./components/btn.css);
+@import url(./components/input.css);
 :root{
     font-size: 16px;
     font-family: 'Lato', sans-serif;
@@ -20,6 +21,7 @@ h2 { font-size: 1.5rem; }
 h3 { font-size: 1.17rem; } 
 h5 { font-size: .83rem; } 
 h6 { font-size: .75rem; }
+small{ font-size: .80rem; }
 html{
     height: 100%;
 }
@@ -27,6 +29,7 @@ html{
     display: flex;
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
 }
 body{
     color: var(--on-bg);
@@ -44,6 +47,7 @@ body{
 
     --tertiary: #6c5e00;
     --tertiary-cont: #fbe360;
+    --on-tertiary-cont: #211c00;
 
     --bg: #fefbff;
     --on-bg: #1b1b1f;
@@ -80,6 +84,7 @@ body.dark{
 
     --tertiary: #ddc747;
     --tertiary-cont: #514700;
+    --on-tertiary-cont: #fbe360;
 
     --bg: #1b1b1f;
     --on-bg: #e4e1e6;
@@ -112,6 +117,8 @@ body:has(.sidebar--shown) #openside{
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .container{
