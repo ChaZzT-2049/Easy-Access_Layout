@@ -96,6 +96,11 @@
     }
     .sidebar__head{
         padding: 1rem;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .sidebar__head h2{
+        font-size: 1.17rem;
     }
     body:has(.sidebar--shown) #openside{
         background: var(--bg);

@@ -32,18 +32,19 @@
             </ul>
         </header>
         <main class="main__container">
-
-            <div class="sign--in-up__card">
+            <section class="sign--in-up__card">
                 <div class="logo--vertical">
+                    <h2 class="logo__message">¡Bienvenido nuevo usuario!</h2>
                     <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
                     <h2>Easy-<b>Access</b></h2>
                     <small>Acceso seguro, Acceso fácil.</small>
+                    <span class="logo__message">Descubre los beneficios de usar Easy Access, registra tus datos para crear tu cuenta.</span>
                 </div>
-                <h1 class="sign--in-up__title">Registro</h1>
                 <form class="sign--in-up__form" action="home.html">
+                    <legend><h1 class="sign--in-up__title">Registro</h1></legend>
                     <fieldset class="sign--in-up__form__field">
                         <label for="nombre">Nombre</label>
-                        <input type="email" name="nombre" id="nombre" placeholder="Escribe tu nombre completo">
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre completo">
                     </fieldset>
                     <fieldset class="sign--in-up__form__field">
                         <label for="correo">Correo</label>
@@ -55,16 +56,16 @@
                     </fieldset>
                     <fieldset class="sign--in-up__form__field">
                         <label for="passwordc">Confirmar Contraseña</label>
-                        <input type="passwordc" name="passwordc" id="passwordc" placeholder="Escribe de nuevo la contraseña">
+                        <input type="password" name="passwordc" id="passwordc" placeholder="Escribe de nuevo la contraseña">
                     </fieldset>
                     <fieldset class="sign--in-up__form__field--row">
                         <label for="terms"><small>He leído y acepto los terminos y condiciones.</small></label>
                         <input type="checkbox" name="terms" id="terms">
                     </fieldset>
                     <button class="btn btn--primary">Crear Cuenta</button>
-                    <legend class="register__enlace">¿Ya tienes cuenta? <a href="register.html">Inicia Sesión aquí</a>.</legend>
+                    <legend class="register__enlace">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión aquí</a>.</legend>
                 </form>
-            </div>
+            </section>
         </main>
         <footer class="sign--in-up__footer"><h4>Easy-Access. © Derechos Reservados 2023</h4></footer>
     </div>
