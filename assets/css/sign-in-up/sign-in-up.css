@@ -84,6 +84,18 @@
     display: flex;
     align-items: center;
 }
+.pass{
+    display: flex;
+    align-items: center;
+}
+.pass input{
+    flex-grow: 1;
+    position: relative;
+}
+.pass i{
+    position: absolute;
+    right: 2rem;
+}
 
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .topbar{
@@ -109,5 +121,8 @@
     }
     .logo__message{
         display: none;
+    }
+    .pass i{
+        right: 1.5rem;
     }
 }

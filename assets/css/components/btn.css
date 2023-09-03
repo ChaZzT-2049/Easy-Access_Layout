@@ -2,10 +2,13 @@ button{
     border: none;
     font-size: 1rem;
     cursor: pointer;
+    color: var(--on-bg);
+    background: none;
 }
 .btn{
     padding: .25rem .5rem;
     border-radius: .25rem;
+    background: var(--surface-v);
 }
 
 .btn--primary{
@@ -55,6 +58,9 @@ button{
     color: var(--surface-v);
     cursor: not-allowed;
 }
+.btn--disabled i{
+    cursor: inherit;
+}
 
 .btn--icon{
     display: flex;
@@ -79,16 +85,35 @@ a.btn--icon, a.btn{
     text-align: center;
     transition: outline 300ms ease-in;
 }
+
 .btn--round i{
-    background: var(--secondary);
+    background: var(--surface-v);
     border-radius: 100%;
     font-size: 1.75rem;
     padding: .75rem;
-    color: var(--secondary-cont);
     cursor: pointer;
 }
-.btn--round i:hover{
+.round--primary i{
+    background: var(--primary);
+    color: var(--primary-cont);
+}
+.round--secondary i{
+    background: var(--secondary);
+    color: var(--secondary-cont);
+}
+.round--primary i:hover{
+    outline: .25rem solid var(--primary-cont);
+}
+.round--secondary i:hover{
     outline: .25rem solid var(--secondary-cont);
+}
+.round--disabled{
+    cursor: not-allowed;
+}
+.round--disabled i{
+    background: var(--outline);
+    color: var(--surface-v);
+    cursor: inherit;
 }
 
 a.btn--round{

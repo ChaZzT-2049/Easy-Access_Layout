@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+    <title>Componentes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/content/content.css">
+
+</head>
+<body class="container">
+    <div class="app">
+        <main class="main__container">
+            <h3>Buttons</h3>
+            <section>
+                <span>Base</span>
+                <button class="btn">botón</button>
+                <span>primary</span>
+                <button class="btn btn--primary">botón primario</button>
+                <span>secondary</span>
+                <button class="btn btn--secondary">botón secundario</button>
+                <br><br>
+                <span>Outline</span>
+                <button class="btn btn--outline">outline</button>
+                <span>primary</span>
+                <button class="btn btn--outline outline--primary">outline primario</button>
+                <span>secondary</span>
+                <button class="btn btn--outline outline--secondary">outline secundario</button>
+                <br><br>
+                <span>Disabled</span>
+                <button class="btn btn--disabled">botón disabled</button>
+                <br><br>
+                <span>Base + Icon</span>
+                <button class="btn btn--icon">botón icon <i class="material-icons">exit_to_app</i></button>
+                <span>primary</span>
+                <button class="btn btn--icon btn--primary">botón icon <i class="material-icons">exit_to_app</i></button>
+                <span>secondary</span>
+                <button class="btn btn--icon btn--secondary">botón icon <i class="material-icons">exit_to_app</i></button>
+                <span>disabled</span>
+                <button class="btn btn--icon btn--disabled">botón icon <i class="material-icons">exit_to_app</i></button>
+                <br><br>
+                <span>Base Redondo-icon</span>
+                <button class="btn--round"><i class="material-icons">add</i>btn redondo</button>
+                <span>primary</span>
+                <button class="btn--round round--primary"><i class="material-icons">add</i>btn redondo</button>
+                <span>secondary</span>
+                <button class="btn--round round--secondary"><i class="material-icons">add</i>btn redondo</button>
+                <span>disabled</span>
+                <button class="btn--round round--disabled"><i class="material-icons">add</i>btn redondo</button>
+            </section>
+            <br>
+            <section>
+                <h3>Inputs</h3>
+                <br>
+                <span>base /active</span>
+                <input type="text" placeholder="Escribe">
+                <span>error</span>
+                <input class="input--error" type="text" placeholder="Escribe">
+                <span>Disabled</span>
+                <input type="text" disabled placeholder="Escribe">
+                <br><br>
+                <span>area</span>
+                <textarea name="area" id="" placeholder="Escribe"></textarea>
+                <span>area</span>
+                <textarea class="input--error" name="area" id="" placeholder="Escribe"></textarea>
+                <span>area</span>
+                <textarea disabled name="area" id="" placeholder="Escribe"></textarea>
+                <br><br>
+                <span>date</span>
+                <input type="date" name="" id="">
+                <span>disabled</span>
+                <input disabled type="date" name="" id="">
+                <span>error</span>
+                <input type="date" class="input--error">
+                <span>datetime</span>
+                <input type="datetime" name="" id="">
+                <span>datetime local</span>
+                <input type="datetime-local" name="" id="">
+                <span>time</span>
+                <input type="time" name="" id="">
+                <br><br>
+                <span>file</span>
+                <input type="file" name="" id="">
+                <br><br>
+                <span>error</span>
+                <input type="file" class="input--error" name="" id="">
+            </section>
+            <section>
+                <h3>select</h3>
+                <span>base</span>
+                <div class="select__container">
+                    <select value="" name="" id="">
+                        <option value="" defaultValue="" hidden>Selecciona algo</option>
+                        <option value="">Opcion 1</option>
+                        <option value="">Opcion 2</option>
+                    </select>
+                    <i class="material-icons">expand_more</i>
+                </div>
+            </section>
+            <section>
+                <h3>check and radios</h3>
+                <span>check</span>
+                <input type="checkbox" name="" id="">
+                <span>radio</span>
+                <input type="radio" name="" id="">
+                <span>rango</span>
+                <input type="range" name="" id="">
+                <span>color</span>
+                <input type="color" name="" id="">
+                <span>mes</span>
+                <input type="month" name="" id="">
+                <span>numero</span>
+                <input type="number" inputmode="numeric" name="" id="">
+                <span>reiniciar</span>
+                <input type="reset" value="0">
+                <span>telefono</span>
+                <input type="tel" name="" id="">
+                <span>image</span>
+                <input type="image" src="assets/img/user.png" alt="">
+                <span>submit</span>
+                <input type="submit" value="Enviar">
+                <span>url</span>
+                <input type="url" name="" id="">
+                <span>semana</span>
+                <input type="week" name="" id="">
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+<script src="assets/js/theme.js"></script>
