@@ -15,13 +15,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="stylesheet" href="assets/css/content/content.css">
-
+    <style>
+        .components{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .component-select{
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="container">
     <div class="app">
         <main class="main__container">
             <h3>Buttons</h3>
-            <section>
+            <section class="components">
                 <span>Base</span>
                 <button class="btn">botón</button>
                 <span>primary</span>
@@ -58,7 +70,7 @@
                 <button class="btn--round round--disabled"><i class="material-icons">add</i>btn redondo</button>
             </section>
             <br>
-            <section>
+            <section class="components">
                 <h3>Inputs</h3>
                 <br>
                 <span>base /active</span>
@@ -74,7 +86,8 @@
                 <textarea class="input--error" name="area" id="" placeholder="Escribe"></textarea>
                 <span>area</span>
                 <textarea disabled name="area" id="" placeholder="Escribe"></textarea>
-                <br><br>
+            </section>
+            <section class="components component-select">
                 <span>date</span>
                 <input type="date" name="" id="">
                 <span>disabled</span>
@@ -87,26 +100,51 @@
                 <input type="datetime-local" name="" id="">
                 <span>time</span>
                 <input type="time" name="" id="">
-                <br><br>
-                <span>file</span>
-                <input type="file" name="" id="">
-                <br><br>
-                <span>error</span>
-                <input type="file" class="input--error" name="" id="">
             </section>
-            <section>
-                <h3>select</h3>
-                <span>base</span>
-                <div class="select__container">
-                    <select value="" name="" id="">
-                        <option value="" defaultValue="" hidden>Selecciona algo</option>
-                        <option value="">Opcion 1</option>
-                        <option value="">Opcion 2</option>
-                    </select>
-                    <i class="material-icons">expand_more</i>
+            <section class="components component-select">
+                <span>file</span>
+                <div class="file__container">
+                    <label for="file"><span>Seleccionar archivo</span><small>Sin archivos</small></label>
+                    <input type="file" name="" id="file">
+                </div>
+                <span>error</span>
+                <div class="file__container input--error">
+                    <label for="fileE"><span>Seleccionar archivo</span><small>Sin archivos</small></label>
+                    <input type="file" name="" id="fileE">
+                </div>
+                <span>disabled</span>
+                <div class="file__container">
+                    <label for="fileDis"><span>Seleccionar archivo</span><small>Sin archivos</small></label>
+                    <input disabled type="file" name="" id="fileDis">
                 </div>
             </section>
-            <section>
+            <section class="components component-select">
+                <h3>select</h3>
+                <span>base</span>
+                <label for="select">Selecciona</label>
+                <div class="select__container">
+                    <select value="" name="" id="select">
+                        <option value="" defaultValue="" hidden>Selecciona algo</option>
+                    </select>
+                    <div class="select-options">
+                        <div class="select-option">Opcion 1</div>
+                        <div class="select-option">Opcion 2</div>
+                    </div>
+                </div>
+                <span>Disabled</span>
+                <label for="selectDis">Selecciona</label>
+                <div class="select__container">
+                    <select disabled value="" name="" id="selectDis">
+                        <option value="" defaultValue="" hidden>Selecciona algo</option>
+                    </select>
+                    <div class="select-options">
+                        <div class="select-option">Opcion 1</div>
+                        <div class="select-option">Opcion 2</div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section class="components component-select">
                 <h3>check and radios</h3>
                 <span>check</span>
                 <input type="checkbox" name="" id="">

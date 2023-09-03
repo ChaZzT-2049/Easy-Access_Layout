@@ -53,6 +53,7 @@ body{
     --on-bg: #1b1b1f;
 
     --error: #ba1a1a;
+    --on-error: #ffffff;
     --error-cont: #ffdad6;
     --on-error-cont: #410002;
 
@@ -123,5 +124,9 @@ body:has(.sidebar--shown) #openside{
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .container{
         display: block;
+    }
+    ::selection{
+        background: none;
+        color: none;
     }
 }
