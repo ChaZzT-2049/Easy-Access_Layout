@@ -11,6 +11,13 @@ input{
     background: inherit;
     color: inherit;
     caret-color: var(--secondary);
+    width: 100%;
+    box-sizing: border-box;
+}
+input::-webkit-inner-spin-button{
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 input:hover, textarea:hover, select:hover{
     background: var(--surface-v);
@@ -57,6 +64,7 @@ textarea{
     color: inherit;
     caret-color: var(--secondary);
     resize: none;
+    width: 100%;
 }
 input[type="date"],input[type="datetime-local"],input[type="week"],input[type="month"],input[type="time"]{
     cursor: text;
@@ -96,64 +104,41 @@ input[type="date"]:disabled::after{
     cursor: not-allowed;
 }
 
-select{
-    appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+input[type="file"]{
+    cursor: pointer;
+    padding: 0;
 }
-select{
-    padding: .5rem 1rem;
-    outline: none;
-    font-family: inherit;
-    font-size: 1rem;
-    border: 1px solid var(--outline);
-    border-radius: .25rem;
-    background: var(--bg);
-    color: inherit;
-}
-.select__container{
-    display: flex;
-    position: relative;
-    width: 100%;
-}
-.select__container::after{
-    font-family: 'Material Icons';
-    content: "expand_more";
-    -webkit-font-feature-settings: 'liga' 1;
-    -moz-font-feature-settings: 'liga' 1;
-    font-feature-settings: 'liga' 1;
-    position: absolute;
-    right: 1rem;
-    top: .5rem;
-    font-size: 24px;
-}
-.select__container select:disabled{
-    background: var(--outline);
-}
-.select__container select{
-    flex-grow: 1;
-}
-.select-options{
-    display: none;
-    position: absolute;
-    width: 100%;
-    background: var(--surface-v);
-    border-radius: .25rem;
-}
-.select-option{
-    padding: 1rem;
-}
-.select-option:hover{
+input[type="file"]:hover:not(.input--error){
     background: var(--outline);
     color: var(--surface-v);
 }
-.select__container:focus-within .select-options{
-    display: block;
-    z-index: 9999;
-    top: 2rem;
-    margin-top: 1rem;
+input::-webkit-file-upload-button{
+    background-color: var(--surface-v);
+    color: var(--on-surf-v);
+    border: none;
+    border-right: 1px solid var(--outline);
+    padding: .5rem 1rem;
+    cursor: pointer;
 }
-
+input:hover:not(.input--error, input:disabled)::-webkit-file-upload-button{
+    background-color: var(--on-surf-v);
+    color: var(--surface-v);
+}
+input:focus:not(.input--error, input:disabled)::-webkit-file-upload-button, input:not(.input--error, input:disabled)::-webkit-file-upload-button:active{
+    background: var(--secondary);
+    color: var(--on-secondary);
+    border-color: var(--secondary);
+}
+.input--error::-webkit-file-upload-button{
+    background: var(--error);
+    color: var(--on-error);
+}
+input[type="file"].input--error{
+    outline: 3px solid var(--error-cont);
+}
+input[type="file"]:disabled, input:disabled::-webkit-file-upload-button{
+    cursor: not-allowed;
+}
 input[type="range"]{
     padding: 0;
 }
