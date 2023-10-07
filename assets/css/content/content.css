@@ -180,6 +180,7 @@
     background: var(--error-cont);
     color: var(--on-error-cont);
 }
+
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .main__container{
         padding: .5rem;

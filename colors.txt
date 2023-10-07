@@ -1,0 +1,155 @@
+#4A1B5F
+#4B2475
+#462C8B
+#3C35A0
+#3F51B5
+#577BC1
+#6FA0CC
+#88C0D6
+#A2DAE0
+#BCEAE6
+#D6F3EB
+
+light
+primary 
+#4355b9
+
+on primary (text-icons
+#ffffff
+
+primary container
+#dee0ff
+on primary container
+#00105c
+
+secondary
+#6c5e00
+sec container
+#fbe360
+on sec container
+#211c00
+
+terciary
+#006877
+terciary container
+#a2eeff
+on t container
+#001f25
+
+error
+#ba1a1a
+error container
+#ffdad6
+on error cont
+#410002
+
+bg
+#fefbff
+on bg
+#1b1b1f
+surface
+#fefbff
+on surf
+#1b1b1f
+
+outline
+#767680
+surface variant
+#e3e1ec
+on surf variant
+#46464f
+
+dark
+p
+#bac3ff p
+#08218a on p
+#293ca0 p c
+#dee0ff o p c
+s
+#ddc747 s
+#383000 on s
+#514700 s c
+#fbe360 o s c
+t
+#51d7ef t
+#00363e on t
+#004e5a t c
+#a2eeff o t c
+e
+#ffb4ab e
+#690005 on e
+#93000a e c
+#ffdad6 o e c
+
+bg
+#1b1b1f bg 
+#e4e1e6 on b
+#1b1b1f s
+#e4e1e6 on s
+out
+#90909a out
+#46464f s-v
+#c7c5d0 o s-v
+
+
+select::-ms-expand, select::-webkit-select{
+    display: none;
+    visibility: hidden;
+    background: var(--surface-v);
+}
+select{
+    padding: .5rem 1rem;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--outline);
+    border-radius: .25rem;
+    background: transparent;
+    color: inherit;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select__container{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.select__container::after{
+    font-family: 'Material Icons';
+    content: "expand_more";
+    -webkit-font-feature-settings: 'liga' 1;
+    -moz-font-feature-settings: 'liga' 1;
+    font-feature-settings: 'liga' 1;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+    font-size: 24px;
+}
+.select__container select:disabled{
+    background: var(--outline);
+}
+.select__container select{
+    flex-grow: 1;
+}
+.select-options{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: var(--surface-v);
+    border-radius: .25rem;
+}
+.select-option{
+    padding: 1rem;
+}
+.select-option:hover{
+    background: var(--outline);
+    color: var(--surface-v);
+}
+.select__container:focus-within .select-options{
+    display: block;
+    z-index: 9999;
+    top: 2rem;
+    margin-top: 1.25rem;
+}
