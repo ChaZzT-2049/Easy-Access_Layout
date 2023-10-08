@@ -72,14 +72,14 @@ body.dark .content__text{
 
 /* Clientes */
 .publico{
-    background: var(--secondary-cont);
+    background: var(--secondary);
     padding-bottom: 2rem;
 }
 .publico__text {
     text-align: center;
     padding: 2rem;
     width: 65%;
-    color: var(--on-secondary-cont);
+    color: var(--on-secondary);
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -101,11 +101,13 @@ body.dark .content__text{
     border: 1px solid var(--outline);
     border-radius: 1rem;
     background: var(--bg);
-    transition: all 400ms ease;
+    transition: all 200ms ease;
+    background: var(--secondary-cont);
+    color: var(--on-secondary-cont);
 }
 .card__client:hover{
     background: var(--surface-v);
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 .card__client__cover{
     height: 30vh;
@@ -117,15 +119,23 @@ body.dark .content__text{
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 .card__client__cover img:last-child{
-    width: 25%;
+    width: 20%;
     position: absolute;
     bottom: -1rem;
     right: -1rem;
     background: white;
+    padding: .25rem;
+    border-radius: .5rem;
+    transition: all 200ms ease-in;
+}
+.card__client:hover img:last-child{
+    width: 25%;
     border-radius: 100%;
+    right: -.75rem;
+    bottom: -.75rem;
 }
 .card__client__text{
     padding: 1rem;
@@ -155,6 +165,7 @@ body.dark .content__text{
 .feature:nth-child(2), .feature:nth-child(4){
     flex-direction: row-reverse;
     background: var(--primary);
+    color: var(--on-primary)
 }
 .feature__img{
     flex: 1 1 350px;
@@ -174,6 +185,9 @@ body.dark .content__text{
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+}
+.feature__content h2{
+    font-weight: 300;
 }
 /* Footer */
 
@@ -205,12 +219,14 @@ body.dark .welcome__footer{
 }
 .content__column{
     display: flex;
+    flex: 1 1 200px;
     flex-direction: column;
     gap: 1rem;
 }
 .content__column h3{
     color: var(--primary-cont);
     font-weight: 700;
+    text-align: center;
 }
 body.dark .content__column h3{
     color: var(--primary);
@@ -218,19 +234,22 @@ body.dark .content__column h3{
 .content__column ul{
     display: flex;
     flex-direction: column;
-    gap: .5rem;
 }
-.content__column li a{
+.content__column li{
+    display: flex;
+    transition: all 200ms ease-in;
+}
+.content__column li a, .content__column li span{
     color: inherit;
     text-decoration: none;
+    width: 100%;
+    padding: .5rem;
 }
 .content__column li:hover{
     color: var(--tertiary-cont);
+    background: var(--primary);
     text-decoration: underline;
-}
-
-body.dark .content__column li:hover{
-    color: var(--on-tertiary-cont);
+    font-weight: 700;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .presentation_content{
