@@ -132,7 +132,7 @@ body.dark .content__text{
 }
 /* Features */
 .features{
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
 }
 .features__text{
     text-align: center;
@@ -178,37 +178,58 @@ body.dark .content__text{
 }
 .suscripcion__text{
     text-align: center;
-    gap: 1rem;
+    gap: .5rem;
 }
 .select__suscription{
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    gap: .5rem;
+    align-items: center;
+    padding: 2rem 0;
 }
 .select__suscription input{
     display: none;
 }
 .select__suscription label{
-    border: 2px solid var(--outline);
-    width: 2rem;
-    border-radius: 1rem;
-    position: relative;
+    background: var(--secondary-cont);
+    padding: .5rem 2rem;
+    color: var(--on-secondary-cont);
+    transition: all 200ms linear;
     cursor: pointer;
-    transition: all 200ms ease;
 }
-.select__suscription label::before{
-    content: '';
+.select__suscription fieldset input:checked ~ label {
+    background: var(--secondary);
+    color: var(--on-secondary);
+}
+
+.suscriptions{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+.suscription__plan{
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 1rem 1rem 1rem;
+    background: var(--surface-v);
+    position: relative;
+}
+.suscription__plan img{
+    background: var(--secondary);
+    width: 25%;
+    height: 4rem;
+    border-radius: .5rem;
     position: absolute;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    background: var(--on-surf-v);
-    transition: all 200ms ease;
+    top: -2rem;
+
 }
-.select__suscription input:checked ~ label::before{
-    background-color: var(--secondary);
-    transform: translateX(1rem);
+.suscription__plan button{
+    padding: 1rem;
 }
 /* Footer */
 
@@ -303,5 +324,14 @@ body.dark .content__column h3{
     }
     .footer__content{
         justify-content: flex-start;
+    }
+    .suscripcion{
+        padding: 1rem;
+    }
+    .select__suscription{
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        background: var(--bg);
     }
 }
