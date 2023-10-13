@@ -204,7 +204,6 @@ body.dark .content__text{
 }
 
 .suscriptions{
-    margin-top: 3rem;
     display: flex;
     justify-content: center;
     row-gap: 3rem;
@@ -212,7 +211,7 @@ body.dark .content__text{
     flex-wrap: wrap;
 }
 .suscription__plan{
-    flex: 1 1 200px;
+    flex: 0 1 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -223,11 +222,27 @@ body.dark .content__text{
 }
 .suscription__plan img{
     width: 5rem;
+    align-self: center;
     height: 5rem;
     border-radius: .5rem;
-    position: absolute;
-    top: -2.5rem;
     outline: 2px solid var(--secondary);
+}
+.suscription__plan h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--secondary);
+    color: var(--on-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.suscription__plan h1{
+    margin-top: 2rem;
+    text-align: center;
 }
 .suscription__plan button{
     padding: 1rem;
@@ -240,8 +255,17 @@ body.dark .content__text{
 }
 .plan__feature{
     border-top: 1px solid var(--outline);
-    border-collapse: collapse;
     padding: 1rem 0;
+}
+.plan__feature::before{
+    font-family: 'Material Icons';
+    content: "\e5ca";
+    margin-right: 1rem;
+    -webkit-font-feature-settings: 'liga' 1;
+    -moz-font-feature-settings: 'liga' 1;
+    font-feature-settings: 'liga' 1;
+    color: var(--secondary);
+    font-weight: 700;
 }
 .plan__feature::first-letter{
     text-transform: uppercase;
