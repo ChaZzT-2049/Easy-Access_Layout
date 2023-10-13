@@ -193,14 +193,12 @@ body.dark .content__text{
     background: var(--outline);
     padding: .5rem 2rem;
     color: var(--surface-v);
-    transition: all 200ms linear;
+    transition: all 200ms ease-in;
     cursor: pointer;
-    font-weight: 400;
 }
 .select__suscription fieldset input:checked ~ label {
     background: var(--secondary);
     color: var(--on-secondary);
-    font-weight: 700;
 }
 
 .suscriptions{
@@ -210,7 +208,7 @@ body.dark .content__text{
     flex-wrap: wrap;
 }
 .suscription__plan{
-    flex: 0 1 255px;
+    flex: 0 1 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -240,7 +238,7 @@ body.dark .content__text{
     box-sizing: border-box;
 }
 .suscription__plan h1{
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     text-align: center;
 }
 .suscription__plan button{
@@ -258,20 +256,16 @@ body.dark .content__text{
     display: flex;
     align-items: center;
 }
-.plan__feature::before{
-    font-family: 'Material Icons';
-    content: "\e5ca";
+.plan__feature i{
     margin-right: .25rem;
-    -webkit-font-feature-settings: 'liga' 1;
-    -moz-font-feature-settings: 'liga' 1;
-    font-feature-settings: 'liga' 1;
-    color: var(--secondary);
+    color: var(--ok);
     font-weight: 700;
+    cursor: default;
 }
-.plan__feature::first-letter{
+.plan__feature span::first-letter{
     text-transform: uppercase;
 }
-.plan__feature::after{
+.plan__feature span::after{
     content: ".";
 }
 /* Footer */
