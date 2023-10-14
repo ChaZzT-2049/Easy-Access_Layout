@@ -110,11 +110,6 @@ body.dark{
     --surface-v: #46464f;
     --on-surf-v: #c7c5d0;
 }
-body:has(.sidebar--shown) #openside{
-    opacity: 0;
-    visibility: hidden;
-    transition: all 200ms ease;
-}
 .app{
     display: flex;
     flex-direction: column;

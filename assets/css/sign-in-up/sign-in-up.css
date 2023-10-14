@@ -3,14 +3,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
     background: var(--surface-v);
-    height: 100%;
+    flex: 1 1 250px;
 }
 .logo--vertical a{
     text-decoration: none;
     text-align: center;
-    width: 30%;
+    width: 25%;
 }
 .logo--vertical img{
     width: 100%;
@@ -29,12 +28,10 @@
     margin: 1rem;
     text-align: center;
 }
-
 .sign--in-up__card{
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
 }
 .sign--in-up__title{
     color: var(--primary);
@@ -46,9 +43,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    padding: 0 1rem;
-    width: 40%;
-    height: 100%;
+    padding: 1rem;
+    flex: 1 1 250px;
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 .sign--in-up__form__field{
@@ -56,12 +52,15 @@
     flex-direction: column;
     gap: .25rem;
 }
+.sign--in-up__form__field input{
+    width: 100%;
+}
 .sign--in-up__form__field small a{
     color: var(--on-tertiary-cont);
     font-weight: 700;
 }
 .sign--in-up__form button{
-    padding: .5rem;
+    padding: 1rem;
 }
 .register__enlace a{
     color: var(--on-primary-cont);
@@ -84,46 +83,26 @@
     display: flex;
     align-items: center;
 }
-.pass{
-    display: flex;
-    align-items: center;
-}
-.pass input{
-    flex-grow: 1;
-    position: relative;
-}
-.pass i{
-    position: absolute;
-    right: 2rem;
-}
+
+
 
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .topbar{
         display: none;
     }
-    .sign--in-up__card{
-        width: 100%;
-        height: 100%;
-        gap: 1rem;
-        flex-direction: column;
-        justify-content: center;
+    .logo--vertical{
+        background: var(--bg);
     }
     .sign--in-up__form{
-        width: 100%;
         justify-content: flex-start;
         box-shadow: none;
-        padding: 0;
-        height: auto;
+        padding: .5rem;
     }
-    .logo--vertical{
-        width: 100%;
-        height: auto;
-        background: none;
-    }
+    
     .logo__message{
         display: none;
     }
-    .pass i{
-        right: 1.5rem;
+    .sign--in-up__form button{
+        padding: .5rem;
     }
 }

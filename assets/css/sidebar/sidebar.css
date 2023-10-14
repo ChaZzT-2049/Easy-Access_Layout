@@ -1,14 +1,18 @@
 .sidebar{
-    background: var(--surface-v);
-    width: 0%;
-    transition: all 300ms ease-out;
+    background: var(--bg);
+    transition: all 400ms ease-out;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -50vw;
+    height: 100%;
+    width: max-content;
+    box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.4);
 }
 .sidebar--shown{
-    width: 30%;
-    visibility: visible;
-    transition: all 300ms ease-in;
+    left: 0;
+    transition: all 400ms ease-in;
 }
 .sidebar__head{
     display: flex;
@@ -29,6 +33,7 @@
 .sidebar__content{
     flex-grow: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 .5rem .5rem .5rem;
 }
 .sidebar__section{
@@ -42,12 +47,10 @@
 .logo__container{
     text-align: center;
     box-sizing: border-box;
-    width: 100%;
     padding: 1rem 0;
-    background: var(--outline);
 }
 .sidebar__logo{
-    width: 50%;
+    width: 6rem;
 }
 
 .profile__img{
@@ -84,25 +87,15 @@
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
     .sidebar{
-        position: fixed;
-        top: 0;
-        left: -75%;
-        height: 100%;
-        width: 70%;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+        left: -100vw;
     }
     .sidebar--shown{
         left: 0;
     }
     .sidebar__head{
-        padding: 1rem;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        padding: 1rem .5rem;
     }
     .sidebar__head h2{
         font-size: 1.17rem;
-    }
-    body:has(.sidebar--shown) #openside{
-        background: var(--bg);
     }
 }
